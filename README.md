@@ -15,7 +15,7 @@ A transparent AI guide to help begin your art journey. Currently in development 
 ```
 //to create docker scene (everything assuming your in the root folder)
 //This command is to build the docker image based on the website
-docker build -t NAME 
+docker build -t NAME .
 //This is to build the docker container and host the local server at port 8080, using nginx imaging.
 docker run --rm -p 8080:80 --name web NAME
 ```
