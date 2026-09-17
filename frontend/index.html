@@ -3,40 +3,19 @@
 <head>
     <meta charset = "UTF-8">
     <meta http-equiv="X-UA-Compatible" contet="IE=edge">
-    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
-    <link rel="stlesheet" href = "styles.css">
-    <script src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "styles.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <h1> SideChalk</h1>
     <h2>A transparent AI guide to help begin your art journey.</h2>
-    <!--
-    <form id="userImage" action="action.html">
-        <label for="img">Select image:</label>
-        <input type="file" id="image" accept="image/*">
-        <buttom type ="submit">Submit</buttom>
-    </form>
-    <img id="preview" src="#" accept="image/*"
-    -->
     <div class="first">
-    <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"></p>
+    <p><input type="file" accept="image/*" name="image" id="file"></p>
+    <button id="submitButton">Submit</button>
     <p><img id="output" width="500" /></p>
+    <button onclick="analyzeImage()">Analyze Image</button>
     </div>
-
-
-    <script type="text/javascript">
-    var loadFile = function(event) {
-        var image = document.getElementById('output');
-        image.src = URL.createObjectURL(event.target.files[0]);
-    };
-    </script>
-            
-
-    </main>   
-
-    <script>
-
-    </script>
 </body>
 </html>
