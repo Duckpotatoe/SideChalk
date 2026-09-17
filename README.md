@@ -7,9 +7,9 @@ A transparent AI guide to help begin your art journey. Currently in development 
 2) Basic docker Image/Container
 
 ## What needs to be done (too much to name)
-1) Analyze image
-2) Formatting of webpage (CSS)
-3) Enable AI APIs
+1) Working on improving backend communication (file upload)
+2) Learn a little bit of art (hone down what AI needs to focus on)
+3) Visual Analysis
 
 ## Commands to help setup
 ```
