@@ -22,14 +22,15 @@ app.get('/api/analyze/subject/:subjectID', (req, res) =>{
     res.send('W TEST')
 })
 */
+app.use(express.json());
 
-
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.post('/api/analyze', function (req, res) {
+    console.log(req.body.name);
+    res.end();
 });
-/*
-app.post('/api/analyze', (req, res) => {
-    const newUser = req.body;
-}) 
-*/
+
+
+app.listen(port, (err) => {
+    if (err) console.log(err);
+    console.log("Server listening on PORT:", port);
+});
