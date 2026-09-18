@@ -1,4 +1,7 @@
 const express = require('express');
+const cors = require('cors');
+const multer = require('multer');
+const upload = multer({ dest:'uploads/'});
 const app = express();
 const port = 3000;
 /*
@@ -22,10 +25,13 @@ app.get('/api/analyze/subject/:subjectID', (req, res) =>{
     res.send('W TEST')
 })
 */
-app.use(express.json());
+app.use(cors({ origin: 'http://localhost:8080' }));
 
-app.post('/api/analyze', function (req, res) {
-    console.log(req.body.name);
+app.use(express.json({limit: '50mb'}));
+
+app.post('/api/analyze', upload.single('image'), (req, res) => {
+    console.log(req.body.imageID);
+    console.log(req.file);
     res.end();
 });
 
