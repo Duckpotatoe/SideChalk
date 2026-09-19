@@ -32,7 +32,7 @@ app.use(express.json({limit: '50mb'}));
 app.post('/api/analyze', upload.single('image'), (req, res) => {
     console.log(req.body.imageID);
     console.log(req.file);
-    res.end();
+    res.json(req.body); //next up is to not end the res but res with the updated analysis
 });
 
 

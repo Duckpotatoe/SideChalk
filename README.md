@@ -21,4 +21,7 @@ docker run --rm -p 8080:80 --name web NAME
 
 npm install multer
 npm install express
+
+start backend command:
+node server.js
 ```

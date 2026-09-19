@@ -14,10 +14,6 @@ var loadFile = function(event) {
 let uploadImage = document.getElementById('submitButton');
 uploadImage.addEventListener('click', loadFile);
 
-function analyzeImage(){
-  
-}
-
 async function getData() {
     let fileInput = document.getElementById('file');
     const url = "http://localhost:3000/api/analyze";
